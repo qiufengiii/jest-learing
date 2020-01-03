@@ -20,6 +20,7 @@
     "css-loader": "3.2.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
+    "enzyme": "^3.11.0",
     "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.1.0",
     "eslint-loader": "3.0.2",
@@ -93,7 +94,8 @@
       "react-app-polyfill/jsdom"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.js"
+      "<rootDir>/src/setupTests.js",
+      "./node_modules/jest-enzyme/lib/index.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
@@ -117,16 +119,11 @@
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
     },
     "moduleFileExtensions": [
-      "web.js",
       "js",
-      "web.ts",
       "ts",
-      "web.tsx",
       "tsx",
       "json",
-      "web.jsx",
-      "jsx",
-      "node"
+      "jsx"
     ],
     "watchPlugins": [
       "jest-watch-typeahead/filename",
@@ -137,5 +134,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@babel/helper-create-regexp-features-plugin": "^7.7.4",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest-enzyme": "^7.1.1"
   }
 }
