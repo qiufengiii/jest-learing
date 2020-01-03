@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from '../../components/Header'
-import { shallow } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
+Enzyme.configure({ adapter: new Adapter() })
 import { findTestWrapper } from '../../../../utils/testUtils'
 
 it('Header渲染样式正常', () => {
