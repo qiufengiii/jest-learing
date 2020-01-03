@@ -5,6 +5,11 @@ import Header from '../../components/Header'
 
 Enzyme.configure({ adapter: new Adapter() })
 
+it('Header渲染样式正常', () => {
+  const wrapper = shallow(<Header />)
+  expect(wrapper).toMatchSnapshot()
+});
+
 it('Header组件包含一个input框', () => {
   const wrapper = shallow(<Header />)
   const InputEle = wrapper.find('[data-test="input"]')

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  line-height: 60px;
+  background: #333333;
+}
+
+.header-content {
+  width: 600px;
+  margin: 0 auto;
+  font-size: 24px;
+  color: #ffffff;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.header-input {
+  width: 360px;
+  float: right;
+  line-height: 24px;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid #dddddd;
+}

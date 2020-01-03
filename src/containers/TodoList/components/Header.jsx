@@ -19,13 +19,18 @@ export default class Header extends Component {
 
   render() {
     const { value } = this.state
-    return <div>
-      <input
-        data-test='input'
-        value={value}
-        onChange={this.handleInput}
-        onKeyUp={this.handleInputKeyUp}
-      />
+    return <div className='header'>
+      <div className='header-content'>
+        TodoList
+        <input
+          className='header-input'
+          data-test='input'
+          value={value}
+          onChange={this.handleInput}
+          onKeyUp={this.handleInputKeyUp}
+          placeholder='Add Todo'
+        />
+      </div>
     </div>
   }
 }
