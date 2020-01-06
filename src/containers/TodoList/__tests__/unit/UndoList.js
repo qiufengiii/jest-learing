@@ -92,4 +92,30 @@ describe('UndoList 组件', () => {
     inputElem.simulate('blur', e)
     expect(fn).toHaveBeenLastCalledWith(e, 1)
   });
+
+  it('当输入框按下回车时触发handleBlur方法', () => {
+    const listData = [{
+      status: 'div',
+      value: '学习Jest'
+    }, {
+      status: 'input',
+      value: '学习TDD'
+    }, {
+      status: 'div',
+      value: '学习单元测试'
+    }]
+
+    const fn = jest.fn()
+    const index = 1
+    const wrapper = shallow(<UndoList list={listData} handleBlur={fn} />)
+    const inputElem = findTestWrapper(wrapper, 'input-item')
+    const e = {
+      target: {
+        value: 'abc'
+      },
+      keyCode: 13
+    }
+    inputElem.simulate('keydown', e)
+    expect(fn).toHaveBeenLastCalledWith(e, 1)
+  });
 })
