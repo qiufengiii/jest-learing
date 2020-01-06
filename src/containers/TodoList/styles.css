@@ -83,3 +83,13 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+
+.undo-list-input {
+  width: 300px;
+  line-height: 22px;
+  position: relative;
+  top: -1px;
+  font-size: 14px;
+  text-indent: 10px;
+  outline: none;
+}

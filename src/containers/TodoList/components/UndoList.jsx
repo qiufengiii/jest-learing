@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class UndoList extends Component {
   render() {
-    const { list, deleteItem } = this.props
+    const { list, deleteItem, handleBlur } = this.props
     return <div className='undo-list'>
       <div className='undo-list-title'>
         正在进行
@@ -15,12 +15,28 @@ export default class UndoList extends Component {
               className='undo-list-item'
               data-test='list-item'
               key={item + '-' + index}
+              onDoubleClick={_ => this.props.changeStatus(index)}
             >
-              {item}
+              {
+                item.status === 'div' ?
+                  item.value :
+                  <input
+                    className='undo-list-input'
+                    autoFocus
+                    defaultValue={item.value}
+                    data-test='input-item'
+                    onBlur={e => handleBlur(e, index)}
+                    onKeyDown={e => {
+                      if (e.keyCode === 13) {
+                        handleBlur(e, index)
+                      }
+                    }}
+                  />
+              }
               <div
                 className='undo-list-delete'
                 data-test='delete-item'
-                onClick={_ => deleteItem(index)}
+                onClick={e => deleteItem(e, index)}
               >-</div>
             </li>
           ))
