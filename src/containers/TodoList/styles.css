@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background: #cdcdcd;
+}
+
 .header {
   line-height: 60px;
   background: #333333;
@@ -26,4 +30,56 @@
   padding: 0 10px;
   outline: none;
   border: 1px solid #dddddd;
+}
+
+.undo-list {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.undo-list-title {
+  line-height: 30px;
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.undo-list-count {
+  float: right;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  text-align: center;
+  background: #e6e6e6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.undo-list-content {
+  list-style: none;
+}
+
+.undo-list-item {
+  line-height: 32px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border-left: 3px solid #629a9c;
+  text-indent: 10px;
+  border-radius: 3px;
+}
+
+.undo-list-delete {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 6px;
+  margin-right: 6px;
+  line-height: 20px;
+  text-align: center;
+  background: #e6e6e6;
+  text-indent: 0;
+  border-radius: 50%;
+  cursor: pointer;
 }
